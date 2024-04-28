@@ -1,0 +1,77 @@
+﻿
+@model IdentityChat.Models.MessageDetailsViewModel
+
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+
+<div class="col-md-12">
+    <div class="card card-primary card-outline">
+
+        <div class="card-header">
+            <h3 class="card-title">Taslak Detayı</h3>
+            <br />
+            <br />
+            <div class="card-tools">
+                <a href="#" class="btn btn-tool" title="Previous"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="btn btn-tool" title="Next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+
+        <div class="card-body p-0">
+            <div class="mailbox-read-info">
+                <h5>Kime : @Model.Name @Model.Surname</h5>
+                <br />
+                <h5>Konu : @Model.Subject</h5>
+                <h6>
+                    <span class="mailbox-read-time float-right">@Model.Date.ToShortDateString()</span>
+                </h6>
+            </div>
+            <!-- /.mailbox-read-info -->
+            <div class="mailbox-controls with-border text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm" data-container="body" title="Delete">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" data-container="body" title="Reply">
+                        <i class="fas fa-reply"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" data-container="body" title="Forward">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <!-- /.btn-group -->
+                <button type="button" class="btn btn-default btn-sm" title="Print">
+                    <i class="fas fa-print"></i>
+                </button>
+            </div>
+            <!-- /.mailbox-controls -->
+            <div class="mailbox-read-message">
+
+
+                <p>
+                    @Model.Content
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="card-footer">
+            <a class="btn btn-default btn-sm" href="/Draft/DeleteDraft/@Model.Id"> <i class="far fa-trash-alt"></i>Sil</a>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+

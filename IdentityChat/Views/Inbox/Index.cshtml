@@ -1,0 +1,121 @@
+﻿@model List<IdentityChat.Models.InboxViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+
+
+
+
+<div class="col-md-12">
+
+    <div class="card card-primary card-outline">
+
+        <div class="card-header">
+
+            <h3 class="card-title">Gelen Kutusu</h3>
+            <br />
+            <br />
+            <div class="card-tools">
+
+                <div class="input-group input-group-sm">
+
+                    <input type="text" class="form-control" placeholder="Mail Ara">
+
+                    <div class="input-group-append">
+
+                        <div class="btn btn-primary">
+
+                            <i class="fas fa-search"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- /.card-tools -->
+
+        </div>
+
+        <!-- /.card-header -->
+
+        <div class="card-body p-0">
+
+
+
+            <div class="table-responsive mailbox-messages">
+
+                <table class="table table-hover table-striped">
+
+                    <tbody>
+                        @foreach (var x in Model)
+                        {
+                            <tr>
+
+                                <td>
+
+                                    <div class="icheck-primary">
+
+
+                                        <a class="btn btn-outline-danger btn-sm" href="/Inbox/IsTrashTrue/@x.Id">
+                                            <i class="far fa-trash-alt"></i>
+
+                                            Çöp Kutusu
+                                        </a>
+
+                                    </div>
+
+                                </td>
+
+
+
+                                <td class="mailbox-name"><a href="/Inbox/MessageDetail/@x.Id">@x.Name @x.Surname</a></td>
+
+                                <td class="mailbox-subject">
+
+                                    <b>@x.Subject</b> - @x.Content.Substring(0, 40).ToString()...
+                                    @*Substring(0,40).ToString() içeriğin 0 dan 40 karakter olana kadar kısmı alınacak*@
+
+                                </td>
+
+                                <td class="mailbox-attachment"></td>
+                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+
+                                <td class="mailbox-date">@x.Date.ToShortDateString()</td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

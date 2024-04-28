@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+
+
+
+
+        @await Component.InvokeAsync("_UILayoutNavbarComponentPartial")
+
+        @await Component.InvokeAsync("_UILayoutSideBarComponentPartial")
+
+
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+        @await Component.InvokeAsync("_UILayoutFooterComponentPartial")
+    </div>
+
+    @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
+</body>
+</html>
