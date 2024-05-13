@@ -1,3 +1,8 @@
+# ChatProject
+
+ Bu Proje ASP.NET Core 6.0 ile İdentity Kütüphanesi kullanılarak geliştirilmiştir. Bu projede kullanıcılar sisteme kayıt olduktan sonra birbirleri ile mesajlaşabilir 
+
+
 ![11](https://github.com/fthatmc/IdentityChat/assets/136472585/28a1f587-4245-4f03-a2da-62635adf5674)
 ![1](https://github.com/fthatmc/IdentityChat/assets/136472585/298fe865-0dbb-485f-b6fc-dcb59d439593)
 ![2](https://github.com/fthatmc/IdentityChat/assets/136472585/3540baf3-5fd9-4f46-9fce-9f9392beeb35)
